@@ -14,12 +14,10 @@ symbols = (':', "'", '~', '+', '[', '\\', '^', '{', '%', '(', '-', '@', '"', '*'
 def generatePassword(pass_length: int = 10, char_type_split: list = [3, 3, 2, 2]):
     """
     :param pass_length: The length that the password will be
-    :param char_type: The split of different that the password will contain in
-                      the order lowercase letters, uppercase letters, numbers,
-                      symbols
+    :param char_type: The split of different characters that the password will contain in
+                      the order: lowercase letters, uppercase letters, numbers, symbols
                       example- char_type_split=[3, 3, 2, 2] will include 3
-                      uppercase letters, 3 lowercase letters, 2 numbers and
-                      2 symbols
+                      lowercase letters, 3 uppercase letters, 2 numbers and 2 symbols
     """
     if sum(char_type_split) != pass_length:
            raise Exception('pass_length must be equal to the total sum of char_type_split')
